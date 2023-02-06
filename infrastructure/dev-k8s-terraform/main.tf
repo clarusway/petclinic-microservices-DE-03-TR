@@ -162,7 +162,7 @@ resource "aws_instance" "kube-master" {
     tags = {
         Name = "kube-master"
         "kubernetes.io/cluster/petclinicCluster" = "owned"
-        Project = "tera-kube-ans"
+        Project = "david-test-tera-kube-ans"
         Role = "master"
         Id = "1"
         environment = "dev"
@@ -180,7 +180,7 @@ resource "aws_instance" "worker-1" {
     tags = {
         Name = "worker-1"
         "kubernetes.io/cluster/petclinicCluster" = "owned"
-        Project = "tera-kube-ans"
+        Project = "david-test-tera-kube-ans"
         Role = "worker"
         Id = "1"
         environment = "dev"
@@ -198,7 +198,7 @@ resource "aws_instance" "worker-2" {
     tags = {
         Name = "worker-2"
         "kubernetes.io/cluster/petclinicCluster" = "owned"
-        Project = "tera-kube-ans"
+        Project = "david-test-tera-kube-ans"
         Role = "worker"
         Id = "2"
         environment = "dev"
