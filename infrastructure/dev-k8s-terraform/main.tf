@@ -7,15 +7,15 @@ module "iam" {
 }
 
 variable "sec-gr-mutual" {
-  default = "petclinic-k8s-mutual-sec-group"
+  default = "de-tr-petclinic-k8s-mutual-sec-group"
 }
 
 variable "sec-gr-k8s-master" {
-  default = "petclinic-k8s-master-sec-group"
+  default = "de-tr-petclinic-k8s-master-sec-group"
 }
 
 variable "sec-gr-k8s-worker" {
-  default = "petclinic-k8s-worker-sec-group"
+  default = "de-tr-petclinic-k8s-worker-sec-group"
 }
 
 data "aws_vpc" "name" {
@@ -162,7 +162,7 @@ resource "aws_instance" "kube-master" {
     tags = {
         Name = "kube-master"
         "kubernetes.io/cluster/petclinicCluster" = "owned"
-        Project = "tera-kube-ans"
+        Project = "de-tr-tera-kube-ans"
         Role = "master"
         Id = "1"
         environment = "dev"
@@ -180,7 +180,7 @@ resource "aws_instance" "worker-1" {
     tags = {
         Name = "worker-1"
         "kubernetes.io/cluster/petclinicCluster" = "owned"
-        Project = "tera-kube-ans"
+        Project = "de-tr-tera-kube-ans"
         Role = "worker"
         Id = "1"
         environment = "dev"
@@ -198,7 +198,7 @@ resource "aws_instance" "worker-2" {
     tags = {
         Name = "worker-2"
         "kubernetes.io/cluster/petclinicCluster" = "owned"
-        Project = "tera-kube-ans"
+        Project = "de-tr-tera-kube-ans"
         Role = "worker"
         Id = "2"
         environment = "dev"
